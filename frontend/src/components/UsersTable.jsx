@@ -11,12 +11,12 @@ const UsersTable = () => {
     }, []);
 
     const fetchUsers = async () => {
-        const response = await axios.get('http://localhost:5000/api/users');
+        const response = await axios.get('https://user-management-app-n56t.onrender.com/api/users');
         setUsers(response.data);
     };
 
     const deleteUser = async (id) => {
-        await axios.delete(`http://localhost:5000/api/users/${id}`);
+        await axios.delete(`https://user-management-app-n56t.onrender.com/api/users/${id}`);
         fetchUsers();
     };
 
